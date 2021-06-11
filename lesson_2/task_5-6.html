@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_5-6</title>
+</head>
+
+<body>
+    <script>
+        /*Задача №5 Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.*/
+        function sum(a, b) {
+            return (a + b);
+        }
+
+        function sub(a, b) {
+            return (a - b);
+        }
+
+        function mul(a, b) {
+            return (a * b);
+        }
+
+        function div(a, b) {
+            return (a / b);
+        }
+
+        /* Задача №6 Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+         В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+        */
+        let arg1 = +prompt('Введите первое число:', '');
+        let arg2 = +prompt('Введите второе число:', '');
+        let operation = prompt('Введите операцию:', '');
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                case '+':
+                    return ((sum(arg1, arg2)));
+                case 'sub':
+                case '-':
+                    return ((sub(arg1, arg2)));
+                case 'mul':
+                case '*':
+                    return ((mul(arg1, arg2)));
+                case 'div':
+                case '/':
+                    return ((div(arg1, arg2)));
+            }
+        }
+        alert(mathOperation(arg1, arg2, operation));
+    </script>
+</body>
+
+</html>
