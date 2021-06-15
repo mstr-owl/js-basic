@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task_1</title>
+</head>
+
+<body>
+  <script>
+    /*1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.*/
+    let nums = 0;
+    while (nums <= 100) {
+      let check = true;
+      for (let i = 2; i < nums; i++) {
+        if (nums % i === 0) {
+          check = false;
+          break;
+        }
+      }
+      if (check) console.log(nums);
+      nums++;
+    }
+  </script>
+</body>
+
+</html>
